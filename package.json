@@ -1,0 +1,15 @@
+{
+  "name": "line-sdk",
+  "version": "1.0.0",
+  "description": "Line Message SDK",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GomaNanoHa",
+  "license": "ISC",
+  "dependencies": {
+    "superagent": "^2.3.0",
+    "superagent-promise": "^1.1.0"
+  }
+}
