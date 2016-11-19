@@ -7,9 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GomaNanoHa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HouseOfHobbies/line-sdk-node.git"
+  },
   "license": "ISC",
   "dependencies": {
     "superagent": "^2.3.0",
     "superagent-promise": "^1.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
   }
 }
