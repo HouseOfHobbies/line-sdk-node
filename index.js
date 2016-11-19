@@ -10,7 +10,7 @@ class lineSDK
         this.endpointBase = 'https://api.line.me';
     }
 
-    getProgile(userId)
+    getProfile(userId)
     {
         return this.httpClient.get(`${this.endpointBase}/v2/bot/profile/${encodeURIComponent(userId)}`);
     }
