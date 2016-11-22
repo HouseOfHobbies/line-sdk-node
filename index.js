@@ -15,6 +15,11 @@ class lineSDK
         return this.httpClient.get(`${this.endpointBase}/v2/bot/profile/${encodeURIComponent(userId)}`);
     }
 
+    getMessageContent(messageId)
+    {
+        return this.httpClient.get(`${this.endpointBase}/v2/bot/message/${encodeURIComponent(messageId)}/content`);
+    }
+
 }
 
 module.exports = {
