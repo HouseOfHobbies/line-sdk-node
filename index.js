@@ -20,12 +20,21 @@ class lineSDK
         return this.httpClient.get(`${this.endpointBase}/v2/bot/message/${encodeURIComponent(messageId)}/content`);
     }
 
+    replyMessage(replyToken, messageBuilder)
+    {
+        return this.httpClient.post(`${this.endpointBase}/v2/bot/message/reply`, {
+            replyToken: replyToken,
+            messages: messageBuilder.buildMessage()
+        });
+    }
+
 }
 
 module.exports = {
     lineSDK: lineSDK,
     request: lineRequest,
-    constant: require('./lib/constant/')
+    MessageBuilder: require('./lib/messagebuilder/'),
+    Constant: require('./lib/constant/')
 }
 /*
 let sdk = new lineRequest();
