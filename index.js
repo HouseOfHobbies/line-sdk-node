@@ -17,9 +17,11 @@ class lineSDK
 
 }
 
-module.exports = lineSDK;
-module.exports.request = lineRequest;
-
+module.exports = {
+    lineSDK: lineSDK,
+    request: lineRequest,
+    constant: require('./lib/constant/')
+}
 /*
 let sdk = new lineRequest();
 
