@@ -60,6 +60,14 @@ class lineSDK
         return this.replyMessage(replyToken, new TextMessageBuilder(text, ...extraTexts));
     }
 
+    pushMessage(to, messageBuilder)
+    {
+        return this.httpClient.post(`${this.endpointBase}/v2/bot/message/push`, {
+            to: to,
+            messages: messageBuilder.buildMessage()
+        });
+    }
+
 }
 
 module.exports = {
