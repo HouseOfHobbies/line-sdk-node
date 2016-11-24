@@ -68,6 +68,11 @@ class lineSDK
         });
     }
 
+    leaveGroup(groupId)
+    {
+        return this.httpClient.post(`${this.endpointBase}/v2/bot/group/${encodeURIComponent(groupId)}/leave`, []);
+    }
+
 }
 
 module.exports = {
