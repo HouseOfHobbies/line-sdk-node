@@ -55,11 +55,26 @@ class lineSDK
         });
     }
 
+    /**
+     *  Reply Text
+     *
+     *  @param  String  replyToken
+     *  @param  String  text
+     *  @param  String  extraTexts(Variable Length)
+     *  @return Response
+     */
     replyText(replyToken, text, ...extraTexts)
     {
         return this.replyMessage(replyToken, new TextMessageBuilder(text, ...extraTexts));
     }
 
+    /**
+     *  Push Message
+     *
+     *  @param  String to
+     *  @param  Messagebuilder  messageBuilder
+     *  @return Response
+     */
     pushMessage(to, messageBuilder)
     {
         return this.httpClient.post(`${this.endpointBase}/v2/bot/message/push`, {
@@ -68,11 +83,23 @@ class lineSDK
         });
     }
 
+    /**
+     *  Leave Group
+     *
+     *  @param  String
+     *  @return Response
+     */
     leaveGroup(groupId)
     {
         return this.httpClient.post(`${this.endpointBase}/v2/bot/group/${encodeURIComponent(groupId)}/leave`, []);
     }
 
+    /**
+     *  Leave Room
+     *
+     *  @param  String
+     *  @return Response
+     */
     leaveRoom(groupId)
     {
         return this.httpClient.post(`${this.endpointBase}/v2/bot/room/${encodeURIComponent(groupId)}/leave`, []);
