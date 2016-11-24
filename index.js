@@ -76,17 +76,3 @@ module.exports = {
     MessageBuilder: MessageBuilder,
     Constant: require('./lib/constant/')
 }
-/*
-let sdk = new lineRequest();
-
-let message = {
-    to: '',
-    messages: [
-        {
-            type: 'text',
-            text: 'test'
-        }
-    ]
-}
-//sdk.post("https://api.line.me/v2/bot/message/push",JSON.stringify(message)).then((res) => {console.log(res.body)});
-*/
