@@ -1,17 +1,24 @@
 {
   "name": "line-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Line Message SDK",
   "main": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "GomaNanoHa",
+  "author": "Goma::NanoHa",
   "repository": {
     "type": "git",
     "url": "https://github.com/HouseOfHobbies/line-sdk-node.git"
   },
-  "license": "ISC",
+  "license": "MIT",
+  "keyword": [
+      "line",
+      "line-bot",
+      "bot",
+      "message-api",
+      "api"
+  ],
   "dependencies": {
     "superagent": "^2.3.0",
     "superagent-promise": "^1.1.0"
